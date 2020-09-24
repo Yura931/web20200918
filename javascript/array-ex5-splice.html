@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        var heros = ["cap", "hulk", "thor", "thanos"];
+
+        heros.splice(0, 1);
+        // (n,번 index에서 (몇개)를 지울 것인지
+        for (var i =0; i < heros.length; i++) {
+            console.log(heros[i]);
+        }
+
+        // "batman" , .. index에서 지워진 곳에 들어감
+        heros.splice(1, 0, "batman", "superman");
+        for (var i = 0; i < heros.length; i++) {
+            console.log(heros[i]);
+        }
+    </script>
+</body>
+</html>

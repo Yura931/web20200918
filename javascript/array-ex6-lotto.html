@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <button onclick="lotto()">로또 번호</button>
+    <div id="result"></div>
+    <script>
+        function lotto() {
+            var numbers = [];
+
+            
+            while (numbers.length < 6){
+                var newNumber = Math.floor(Math.random()*45)+1;
+                if (!numbers.includes(newNumber)) {
+                    numbers.push(newNumber);
+                }
+            }
+// div>1</div1> *$6
+            var txt = "";
+            for (var i = 0; i < numbers.length; i++) {
+                txt += "<div>" + numbers[i] + "</div>";
+            }
+            document.getElementById("result").innerHTML = txt;
+        }
+
+// includes() Check if an array contains the specified element
+// 값이 있는지 없는지 확인 할 수 있음.
+    </script>
+</body>
+</html>
