@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#head1").click(function() {
+                console.log("head1 click");
+            });
+            $("#head2").on("click", function(){
+                console.log("head2 click");
+            });
+           
+            $("#head3").on({
+                click: function() {
+                    console.log("head3 click");
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <!-- // on - method명("click")을 직접 명시하지 않았기 떄문에 언제든 변경 가능 -->
+    <h1 id="head1">Lorem.</h1>
+    <h1 id="head2">Excepturi.</h1>
+    <h1 id="head3">Quas.</h1>
+    <h1 id="head4">Excepturi.</h1>
+    <h1 id="head5">Quidem.</h1>
+    <!-- .on( events [, selector ] [, data ], handler )
+    on 안에 들어갈 수 있는 parameter[]안에 것들은 생략가능 -->
+</body>
+</html>
